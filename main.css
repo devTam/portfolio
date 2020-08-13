@@ -411,24 +411,58 @@ body {
           box-shadow: 1px 2px 6px rgba(255, 255, 255, 0.15);
 }
 
-.projects__container .project:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
 .projects__container .project__link {
   text-decoration: none;
   color: #b28451;
   display: block;
   height: 100%;
+  background-color: #c69963;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.projects__container .project__image {
-  height: 100%;
-  width: 100%;
+.projects__container .project__link .project-open {
+  font-size: 5rem;
+  color: #c69963;
+  display: block;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.projects__container .project__link .project-open:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.projects__container .project__link h2 {
+  padding: 1rem;
+  text-align: center;
+  color: #6d5d4b;
+  font-weight: bold;
+}
+
+.projects__container .project__link .footer__link {
+  margin: auto;
+}
+
+.projects__container .project__link .footer__link svg {
+  fill: #fff;
+  height: 5rem;
+  margin-left: 0;
+  width: 5rem;
 }
 
 .projects__container .project__name {
+  margin-top: auto;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
