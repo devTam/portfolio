@@ -440,6 +440,7 @@ body {
 .contact {
   padding: 5rem;
   padding-top: 0;
+  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -627,6 +628,9 @@ body {
 }
 
 @media only screen and (max-width: 529px) {
+  .navbar__list li:not(:nth-child(1)) {
+    display: none;
+  }
   .about__process {
     display: none;
   }
