@@ -1,3 +1,4 @@
+
 // ====COLOR VARIABLES ====
 $color-primary: #c69963;
 $color-primary-dark: #b28451;
@@ -5,6 +6,8 @@ $color-grey-light1: #f9f7f6;
 $color-grey-light2: #999;
 $color-grey-dark1: #54483a;
 $color-grey-dark2: #6d5d4b;
+
+
 
 // ==== FONT VARIABLES ====
 $font-primary: "Nunito", sans-serif;
@@ -19,7 +22,7 @@ $font-display: "Josefin Sans", sans-serif;
   animation: fromLeft 1s;
 }
 
-// ==== MEDIA QUERY BREAKPOINTS ====
+
 
 //==== RESETS ====
 *,
@@ -237,9 +240,11 @@ body {
     box-shadow: 1px 2px 6px rgba(#000, 0.15);
 
     &--img {
-      width: 20rem;
-      height: 20rem;
-      padding: 1rem;
+      width: 12rem;
+      height: 12rem;
+      // padding: .5rem;
+      border: 4px solid $color-primary-dark;
+      margin: 10px;
       border-radius: 50%;
       float: left;
       shape-outside: circle();
@@ -439,6 +444,8 @@ body {
 
       &__submit {
         border-radius: 1rem;
+        border: 2px solid #fff;
+        box-shadow: 2px 2px 10px -5px rgba(0,0,0,0.75);
         padding: 1rem 2.5rem;
         outline: none;
         font-size: 2rem;
@@ -466,8 +473,8 @@ body {
     padding: 1rem 3rem;
 
     &--item {
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
       fill: $color-primary;
       margin-left: 3.5rem;
       transition: all 0.2s;
@@ -483,4 +490,75 @@ body {
     color: $color-primary;
     padding: 1rem 3rem;
   }
+}
+
+// ==== MEDIA QUERY BREAKPOINTS ====
+@media only screen and (max-width: 992px) {
+
+  html {
+    font-size: 50%;
+  }
+
+  .about {
+    clip-path: none; //changed
+  
+    &__heading {
+      margin-top: 5rem;//changed
+    }
+  }
+
+  .contact__form {
+    width: 100%;
+  }
+
+
+}
+
+@media only screen and (max-width: 651px) {
+  html {
+    font-size: 40%;
+  }
+
+  .about__process--container {
+    margin: 0 2.5rem;
+
+    &-text {
+      font-size: 2.5rem;
+      margin-left: 1rem;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+  
+  .projects {
+    clip-path: none;
+  }
+}
+
+@media only screen and (max-width:529px) {
+  .about__process {
+    display: none;
+  }
+
+  .about__info {
+    grid-column: 1 / -1; //changed
+  }
+
+  .about__skills {
+    grid-row: 4 / 5; //changed
+    grid-column: 1 / -1; //changed
+  }
+
+  .contact {
+    padding: 2rem;
+
+    &__description {
+      padding: 0;
+    }
+  }
+
+
 }
